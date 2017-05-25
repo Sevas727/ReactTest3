@@ -45,10 +45,12 @@ const App = () =>
                         </div>
 
                         <div className={s.itemSumTrashBlock}>
-                            <div>
-                                <p>Trash</p>
+                            <div className={s.itemSumTrashBlockWrapper}>
+                                <div className={s.trash}>
+                                    <p>Trash</p>
+                                </div>
+                                <h5 className={s.sum}>Sum</h5>
                             </div>
-                            <h5>Sum</h5>
                         </div>
 
                     </div>

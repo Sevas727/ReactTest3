@@ -101,6 +101,8 @@ html, body {
 .price {
   width: 40px;
   height: 40px;
+  line-height: 40px;
+  text-align: center;
   h5 {
     margin: 0;
     padding: 0;
@@ -110,9 +112,32 @@ html, body {
 .itemQuantityButton {
   width: 40px;
   height: 40px;
+  line-height: 40px;
   text-align: center;
   p {
     margin: 0;
     padding: 0;
+    white-space: nowrap;
+    overflow: hidden;
   }
+}
+
+.itemSumTrashBlock {
+  flex-basis: 115px;
+}
+
+.itemSumTrashBlockWrapper {
+  position: relative;
+  line-height: 260px;
+}
+
+.trash {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.sum {
+  white-space: nowrap;
+  overflow: hidden;
 }
