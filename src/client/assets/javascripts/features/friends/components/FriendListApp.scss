@@ -1,0 +1,247 @@
+
+
+.friendListApp {
+  width: 300px;
+  padding-top: 18px;
+  background-color: #5C75B0;
+  border: 1px solid #E3E3E3;
+}
+
+.friendListApp h1 {
+  color: white;
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 10px;
+  margin-top: 0;
+  padding-left: 10px;
+  font-family: Helvetica;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: bold;
+}
+
+.wrapper {
+  background-color: green;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+ // height: 2350px;
+}
+
+header {
+  flex-basis: 691px;
+  background-color: white;
+  text-align: center;
+  // display: flex;
+  // justify-content: flex-start;
+  // align-content: flex-start;
+  // flex-direction: column;
+  padding-top: 53px;
+
+  h1,h2,h3,h4,h5 {
+    text-align: center;
+    //  flex-basis: 770px;
+    max-width: 770px;
+    margin: 0 auto;
+  }
+  h5 {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 0.75rem;
+    letter-spacing: 5.6px;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    margin-top: 65px;
+    font-family: "Avalon Bold";
+    font-size: 3.75rem;
+    letter-spacing: 0.8px;
+
+    span {
+      font-family: "Avalon Bold";
+      color: #FED837;
+    }
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    margin-top: 46px;
+    line-height: 1.79;
+    font-weight: 600;
+
+    // line-height: 43;
+  }
+
+}
+
+main {
+  flex-basis: 880px;
+  background-color: #fedd23;
+}
+
+footer {
+  //flex-basis: 756px;
+  //background-color: white;
+ // background: url(./bottom-background.jpg) no-repeat white;
+ // background-size: contain;
+ // background-position: center bottom;
+  img {
+    margin-top: 50px;
+    width: 100%;
+  }
+}
+
+.listWrapper {
+  position: relative;
+  background-color: red;
+}
+
+.listContainer {
+  background-color: white;
+  position: absolute;
+  right: 0;
+  width: 90%;
+  top: -147px;
+  box-shadow: 0 25px 54px 0 rgba(0, 0, 0, 0.11);
+}
+
+.listItem {
+  margin: 0 50px;
+  height: 260px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid #ececec;
+}
+
+.itemImgBlock {
+  flex-basis: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 130px;
+    height: 130px;
+    border-radius: 10px;
+    box-shadow: 0 11px 20px 0 rgba(0, 0, 0, 0.08);
+  }
+}
+
+.itemInfBlock {
+  flex-grow: 6;
+  padding-right: 5px;
+  padding-left: 5px;
+
+  h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 2.6;
+    margin-top: 44px;
+  }
+
+  h5 {
+    font-size: 1rem;
+    line-height: 1.56;
+    color: #7d7d7d;
+    margin-top: 8px;
+    height: 70px;
+    overflow: auto;
+  }
+
+  .itemInfBlock-select {
+    width: 242px;
+    height: 51px;
+    border-radius: 2px;
+    border: solid 1px #dcdcdc;
+    font-size: 0.875rem;
+    color: #7d7d7d;
+  }
+}
+
+.itemQuantityBlock {
+  flex-basis: 140px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3px;
+  text-align: center;
+}
+
+.price {
+  width: 39px;
+  height: 39px;
+  line-height: 37px;
+  text-align: center;
+  p {
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #7d7d7d;
+    font-size: 1rem;
+  }
+}
+
+.itemQuantityButton {
+  width: 39px;
+  height: 39px;
+  border-radius: 2px;
+  border: solid 1px #dcdcdc;
+  line-height: 37px;
+  text-align: center;
+  p {
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #7d7d7d;
+  }
+}
+
+.itemSumTrashBlock {
+  flex-basis: 115px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+
+/*
+
+.itemSumTrashBlockWrapper {
+  display: block;
+  position: relative;
+}
+
+.trash {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+  top: -90px;
+  right: -17px;
+
+  .fa-trash {
+    color: #7d7d7d;
+    cursor: pointer;
+  }
+}
+
+.sum {
+  overflow: hidden;
+  margin-top: 120px;
+  font-family: "Avalon Bold";
+  color: black;
+  font-weight: bold;
+  margin-left: 42px;
+}
+*/
