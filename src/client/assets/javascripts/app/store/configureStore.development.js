@@ -1,11 +1,10 @@
 import { createStore, applyMiddleware, compose } from 'redux';
 import { persistState } from 'redux-devtools';
-import promiseMiddleware from 'redux-promise';
 import createLogger from 'redux-logger';
 
-import rootReducer from '../reducer';
+import rootReducer from '../../reducers/';
 import DevTools from '../DevTools';
-
+import thunk from 'redux-thunk';
 /**
  * Entirely optional.
  * This tiny library adds some functionality to your DevTools,
@@ -14,7 +13,7 @@ import DevTools from '../DevTools';
  */
 const logger = createLogger();
 
-const middlewares = [promiseMiddleware, logger, require('redux-immutable-state-invariant')()];
+const middlewares = [thunk, logger, require('redux-immutable-state-invariant')()];
 
 // By default we try to read the key from ?debug_session=<key> in the address bar
 const getDebugSessionKey = function () {
@@ -34,8 +33,8 @@ export default function configureStore(initialState) {
 
   // Enable hot module replacement for reducers (requires Webpack or Browserify HMR to be enabled)
   if (module.hot) {
-    module.hot.accept('../reducer', () => {
-      const nextReducer = require('../reducer').default;
+    module.hot.accept('../../reducers', () => {
+      const nextReducer = require('../../reducers').default;
       store.replaceReducer(nextReducer);
     });
   }

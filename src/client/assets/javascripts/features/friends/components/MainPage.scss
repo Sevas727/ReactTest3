@@ -26,7 +26,6 @@
 }
 
 .wrapper {
-  background-color: green;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -118,7 +117,7 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border-bottom: 1px solid #ececec;
+  border-bottom: 1.3px solid #ececec;
 }
 
 .itemImgBlock {
@@ -210,38 +209,52 @@ footer {
   flex-basis: 115px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
 }
 
-
-
-/*
 
 .itemSumTrashBlockWrapper {
-  display: block;
   position: relative;
+  width: 100%;
+  height: 100%;
+
+    .trash {
+      font-size: 18px;
+      position: absolute;
+      right: 0;
+      top: 50px;
+
+      .fa-trash {
+        color: #7d7d7d!important;
+        cursor: pointer;
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+
+    .sum {
+      overflow: hidden;
+      font-family: "Avalon Bold";
+      font-size: 1.1rem;
+      text-align: right;
+      color: black;
+      font-weight: bold;
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      margin-top: -9px;
+    }
+
 }
 
-.trash {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  font-size: 18px;
-  top: -90px;
-  right: -17px;
-
-  .fa-trash {
-    color: #7d7d7d;
-    cursor: pointer;
+.total-sum {
+  margin: 50px 50px;
+  h1 {
+    text-align: right;
+    color: black;
+    font-weight: bold;
+    font-size: 2.1875rem;
   }
 }
-
-.sum {
-  overflow: hidden;
-  margin-top: 120px;
-  font-family: "Avalon Bold";
-  color: black;
-  font-weight: bold;
-  margin-left: 42px;
-}
-*/

@@ -24,7 +24,7 @@ module.exports = merge(config, {
       {
         from: path.join(__dirname, '../src/client/assets/images'),
         to: 'images'
-      }
+      },
     ]),
     // Avoid publishing files when compilation fails
     new webpack.NoErrorsPlugin(),
@@ -47,6 +47,10 @@ module.exports = merge(config, {
     new ExtractTextPlugin({
       filename: 'css/app.css',
       allChunks: true
+    }),
+    new webpack.ProvidePlugin({
+      'Promise': 'es6-promise', // Thanks Aaron (https://gist.github.com/Couto/b29676dd1ab8714a818f#gistcomment-1584602)
+      'fetch': 'imports?this=>global!exports?global.fetch!whatwg-fetch'
     })
   ],
   module: {
