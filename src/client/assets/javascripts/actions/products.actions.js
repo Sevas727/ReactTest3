@@ -1,16 +1,13 @@
-require('es6-promise').polyfill();
-require('isomorphic-fetch');
-
-function getProducts2(data) {
-    console.log("getProducts2",data);
+import 'es6-promise';
+import 'isomorphic-fetch';
+import store from "../store/configureStore"
+function getProducts(data) {
     return {
         type: "GET_PRODUCTS", data
     }
 }
 
-
-
-export function getProducts() {
+export function getProductsReq() {
 
     return function (dispatch) {
         return fetch('http://592596b321cf650011fddcac.mockapi.io/api/products')
@@ -20,40 +17,21 @@ export function getProducts() {
                 }
                 return response.json();
             })
-            .then(function (stories) {
-                console.log("stories", stories);
-                dispatch(getProducts2(stories));
+            .then(function (data) {
+                dispatch(
+                    getProducts(data)
+                );
             });
     };
 
 }
-/*
-    return {
-        type: "GET_PRODUCTS", data: {rer: "dww"}
-    };
-*/
-/*
-    fetch('http://592596b321cf650011fddcac.mockapi.io/api/products')
-        .then(res => {
-            console.log("res",res);
-            console.log("data: res.json()", res.json());
-            return {
-                type: "GET_PRODUCTS", data: res.json()
-            }
 
-        })
-        .catch(e => console.log("e",e));
+export function deleteProduct(i) {
 
-*/
- //   return promise;
- //   fetch('http://592596b321cf650011fddcac.mockapi.io/api/products')
-/*
-    fetch('http://592596b321cf650011fddcac.mockapi.io/api/products')
-        .then(function(response) {
-            console.log("response",response);
+  let products = store.getState().productsReducer.products.slice();
+        products.splice(i,1);
 
-        })
-        .catch( alert );
-
-};
-*/
+  return {
+    type: "DELETE_PRODUCT", data: products
+  }
+}

@@ -2,8 +2,8 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import { persistState } from 'redux-devtools';
 import createLogger from 'redux-logger';
 
-import rootReducer from '../../reducers/';
-import DevTools from '../DevTools';
+import rootReducer from '../reducers/';
+import DevTools from '../App/DevTools';
 import thunk from 'redux-thunk';
 /**
  * Entirely optional.
@@ -33,8 +33,8 @@ export default function configureStore(initialState) {
 
   // Enable hot module replacement for reducers (requires Webpack or Browserify HMR to be enabled)
   if (module.hot) {
-    module.hot.accept('../../reducers', () => {
-      const nextReducer = require('../../reducers').default;
+    module.hot.accept('../reducers', () => {
+      const nextReducer = require('../reducers').default;
       store.replaceReducer(nextReducer);
     });
   }

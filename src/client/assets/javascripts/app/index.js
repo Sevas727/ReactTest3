@@ -6,12 +6,11 @@ import { AppContainer } from 'react-hot-loader';
 import Redbox from 'redbox-react';
 
 import Root from './Root';
-import configureStore from './store/configureStore';
+import store from '../store/configureStore';
 
 import 'styles/bootstrap.min.css';
 import 'styles/styles.scss';
 
-const store = configureStore();
 const history = syncHistoryWithStore(browserHistory, store);
 
 // Get the DOM Element that will host our React application
