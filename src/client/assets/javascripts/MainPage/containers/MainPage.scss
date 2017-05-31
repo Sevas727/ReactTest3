@@ -121,6 +121,10 @@ main {
   text-align: center;
   color: #7d7d7d;
   padding: 0!important;
+  &:hover {
+    opacity: 0.8;
+  }
+
 }
 
 .itemSumTrashBlock {
